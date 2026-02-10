@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Glide - Battle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="ui-layer">
+        <div class="hud-bar">
+            <div class="hud-item">VIVOS: <span id="alive-txt">50</span></div>
+            <div class="hud-item">SCORE: <span id="score-txt">0</span></div>
+        </div>
+
+        <div id="start-screen" class="screen">
+            <h1>NEON<br>GLIDE</h1>
+            <p>Battle Royale - Toque para voar</p>
+
+            <div class="custom-area">
+                <label for="player-name">NOME DO PILOTO</label>
+                <input type="text" id="player-name" value="Player 1" maxlength="10" placeholder="Digite seu nome">
+
+                <label>COR DA ESFERA</label>
+                <div class="colors" id="color-options"></div>
+            </div>
+
+            <button class="play-btn" onclick="startGame()">DECOLAR</button>
+        </div>
+
+        <div id="game-over-screen" class="screen hidden">
+            <h1 id="go-title" style="color: #ff3333">BATIDO!</h1>
+            <p id="go-msg" style="font-size: 20px; color: #fff;">Score Final: 0</p>
+            <button class="play-btn" onclick="resetGame()">REINICIAR</button>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
